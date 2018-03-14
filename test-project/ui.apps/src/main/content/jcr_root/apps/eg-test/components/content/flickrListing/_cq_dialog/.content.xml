@@ -32,7 +32,7 @@
 									   jcr:primaryType="nt:unstructured"
 										sling:resourceType="cq/gui/components/common/tagspicker"
 										fieldLabel="Tag"
-										name="./cq:DAMTags"/>
+										name="./damTag"/>
                                 </items>
                             </column>
                         </items>

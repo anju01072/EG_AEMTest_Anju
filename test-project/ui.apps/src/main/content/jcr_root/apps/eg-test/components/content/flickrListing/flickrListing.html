@@ -1,4 +1,12 @@
 Flickr Listing Component
-<sly data-sly-test="${wcmmode.edit}">
+
+<p><b>Tag Selected</b> :${properties.damTag}</p>
+<sly data-sly-use.imageModel="com.eg.test.sling.models.ImageModel"/>
+
+ <sly data-sly-list.item=${imageModel.imageListing}>
+
+		Tagged Image Path: ${item}
+ </sly>
+ <sly data-sly-test="${wcmmode.edit}">
     <div class="cq-placeholder cq-marker-start" data-emptytext="Flickr Listing"></div>
 </sly>

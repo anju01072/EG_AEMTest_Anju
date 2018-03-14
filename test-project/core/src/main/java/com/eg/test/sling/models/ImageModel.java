@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +32,10 @@ public class ImageModel {
 	@Inject
 	private TagPageService tagPageService;
 
-
+	/** The DAM Tag. */
+	@Inject
+	@Optional
+	private String[] damTag;
 	/**
 	 * Inits the model.
 	 */
@@ -47,6 +51,6 @@ public class ImageModel {
 	 * @return the job title
 	 */
 	public List<String> getImageListing() {
-		return tagPageService.getTaggedPagesFromDAM();
+		return tagPageService.getTaggedPagesFromDAM(this.damTag);
 	}
 }

@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface TagPageService {
 
-	 public List<String> getTaggedPagesFromDAM();
+	 public List<String> getTaggedPagesFromDAM(String[] damTag);
 
 }

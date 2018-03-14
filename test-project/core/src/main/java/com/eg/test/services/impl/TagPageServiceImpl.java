@@ -27,6 +27,7 @@ import com.day.cq.search.Query;
 import com.day.cq.search.QueryBuilder;
 import com.day.cq.search.result.Hit;
 import com.eg.test.services.TagPageService;
+import com.eg.test.util.CalendarUtil;
 import com.eg.test.util.JCRUtil;
 
 /**
@@ -64,7 +65,7 @@ public class TagPageServiceImpl implements TagPageService{
 
 
 	@Override
-	public List<String> getTaggedPagesFromDAM() {
+	public List<String> getTaggedPagesFromDAM(String[] damTag) {
 
 		List<String> taggedPageList = new ArrayList<String>();
 
@@ -75,8 +76,15 @@ public class TagPageServiceImpl implements TagPageService{
 		map.put("path", searchPath);
 		map.put("type", "cq:Page");
 		map.put("property", "jcr:content/cq:tags");
-		map.put("property.value", "%_%");
+		if(damTag != null && damTag.length>0){
+			map.put("property.value", damTag[0]);
+		}else{
+			map.put("property.value", "%_%");
+		}
 		map.put("property.operation", "like");
+//		map.put("rangeproperty.property",  "@jcr:content/jcr:created");
+//		map.put("rangeproperty.lowerBound", CalendarUtil.getCurrentDateMinus7());
+//		map.put("rangeproperty.lowerOperation", "<");
 		map.put("p.limit", "1"); 
 		Query query = queryBuilder.createQuery(PredicateGroup.create(map),
 				session);
