@@ -82,10 +82,9 @@ public class TagPageServiceImpl implements TagPageService{
 			map.put("property.value", "%_%");
 		}
 		map.put("property.operation", "like");
-//		map.put("rangeproperty.property",  "@jcr:content/jcr:created");
-//		map.put("rangeproperty.lowerBound", CalendarUtil.getCurrentDateMinus7());
-//		map.put("rangeproperty.lowerOperation", "<");
-		map.put("p.limit", "1"); 
+		map.put("rangeproperty.property",  "@jcr:content/jcr:created");
+		map.put("rangeproperty.lowerBound", CalendarUtil.getCurrentDateMinus7());
+		map.put("p.limit", "-1"); 
 		Query query = queryBuilder.createQuery(PredicateGroup.create(map),
 				session);
 		try {
