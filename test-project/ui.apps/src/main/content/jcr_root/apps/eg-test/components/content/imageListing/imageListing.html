@@ -1,4 +1,11 @@
 Image Listing Component
+
+<sly data-sly-use.imageModel="com.eg.test.sling.models.ImageModel"/>
+
+ <sly data-sly-list.item=${imageModel.imageListing}>
+
+		Tagged Image Path: ${item}
+ </sly>
 <sly data-sly-test="${wcmmode.edit}">
     <div class="cq-placeholder cq-marker-start" data-emptytext="Image Listing"></div>
 </sly>
