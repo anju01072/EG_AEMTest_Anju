@@ -4,7 +4,7 @@
 <comment>EG Test Content Package</comment>
 <entry key="createdBy">ArgilDX</entry>
 <entry key="name">test-project.ui.apps</entry>
-<entry key="created">2018-03-14T20:50:37.076+0530</entry>
+<entry key="created">2018-03-14T21:17:28.061+0530</entry>
 <entry key="groupId">com.egtest</entry>
 <entry key="version">0.0.1-SNAPSHOT</entry>
 <entry key="requiresRoot">false</entry>
