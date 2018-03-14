@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="EG Test Package"
+    jcr:primaryType="vlt:PackageDefinition"
+    sling:resourceType="cq/packaging/components/pack/definition"
+    buildCount="1"
+    cqVersion="6.1"
+    group="eg-package"
+    name="test-project"
+    path="/etc/packages/eg-package/test-project-0.0.1-SNAPSHOT"
+    version="0.0.1-SNAPSHOT">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/apps/eg-test"
+            rules="[]"/>
+
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/apps/sling/servlet/errorhandler"
+            rules="[]"/>
+
+
+
+        <f3
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/etc/clientlibs/eg-test"
+            rules="[]"/>
+
+
+        <f4
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/etc/designs/eg-test"
+
+            rules="[include:/etc/designs/eg-test/jcr:content,include:/etc/designs/eg-test/jcr:content/clientlibs,include:/etc/designs/eg-test/jcr:content/clientlibs/.*]"/>
+
+    </filter>
+</jcr:root>

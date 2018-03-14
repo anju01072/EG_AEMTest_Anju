@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>EG Test Content Package</comment>
+<entry key="createdBy">ArgilDX</entry>
+<entry key="name">test-project.ui.apps</entry>
+<entry key="created">2018-03-14T20:50:37.076+0530</entry>
+<entry key="groupId">com.egtest</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">eg-package</entry>
+<entry key="description">Maven Multimodule project for EG Test.</entry>
+<entry key="artifactId">test-project.ui.apps</entry>
+<entry key="path">/etc/packages/eg-package/test-project.ui.apps.zip</entry>
+</properties>

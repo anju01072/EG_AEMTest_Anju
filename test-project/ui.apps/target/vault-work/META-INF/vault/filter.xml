@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/eg-test" />
+    <filter root="/apps/sling/servlet/errorhandler" />
+    <filter root="/etc/clientlibs/eg-test" />
+    <filter root="/etc/designs/eg-test">
+        <include pattern="/etc/designs/eg-test/jcr:content" />
+        <include pattern="/etc/designs/eg-test/jcr:content/clientlibs" />
+        <include pattern="/etc/designs/eg-test/jcr:content/clientlibs/.*" />
+    </filter>
+    <filter root="/etc/packages/adobe/consulting/acs-aem-commons-content-2.11.0.zip" />
+</workspaceFilter>
