@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:description="Base Template"
+    jcr:description="Sample Page Template"
     jcr:primaryType="cq:Template"
-    jcr:title="Base Template"
-    allowedPaths="[/content(.*)]"
-    ranking="{Long}1">
+    jcr:title="Sample Page Template"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}2">
     <jcr:content
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="acs-cen-redesign/components/page/basePage"/>
+        sling:resourceType="eg-test/components/page/landingPage"/>
 </jcr:root>
